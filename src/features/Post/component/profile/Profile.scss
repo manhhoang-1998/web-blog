@@ -1,0 +1,197 @@
+.page {
+  max-width: 1440px;
+  background-color: #f8fbff;
+  .back-btn {
+    font-size: 3rem;
+    color: #c6c6c6;
+    position: fixed;
+    top: 20px;
+    left: 5%;
+  }
+  .container {
+    width: 720px;
+    margin: auto;
+    .userInfo {
+      display: flex;
+      align-items: center;
+      width: 73.99%;
+      margin: auto;
+      .userInfo-avatar {
+        margin: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .userInfo-name {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+    }
+
+    margin: auto;
+    .post-action {
+      width: 73.99%;
+      height: 155px;
+      background-color: #f1f2f5;
+      margin: auto;
+      padding: 16px;
+      border-radius: 20px;
+      &__content {
+        font-size: 1.6rem;
+        position: relative;
+        width: 100%;
+        height: 78px;
+        background-color: #f1f2f5;
+        border: none;
+        outline: none;
+        &::placeholder {
+          position: absolute;
+          font-family: "SVN-Gilroy", sans-serif;
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #3f4650;
+          top: 0;
+          left: 0;
+        }
+      }
+      &__file {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 35px;
+        padding: 0 16px;
+        margin-top: 10px;
+        background-color: #fff;
+        &-desc {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: #3f4650;
+        }
+        &-icon {
+          font-size: 1.8rem;
+          color: #30bceb;
+        }
+      }
+      &__overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+        &-box {
+          margin: 100px auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 400px;
+          border-radius: 10px;
+          background-color: rgba(0, 0, 1, 0.773);
+          &-close {
+            align-self: flex-end;
+            margin: 10px 15px 0;
+            &-icon {
+              color: #fff;
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              line-height: 20px;
+              font-size: 1.5rem;
+              background-color: #999;
+              border-radius: 50%;
+            }
+          }
+          &-button {
+            display: none;
+          }
+          &-input {
+            width: 350px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            margin: 10px auto;
+            &::placeholder {
+              color: #999;
+            }
+          }
+          &-link {
+            width: 350px;
+            height: 350px;
+            background-color: #999;
+            border: none;
+            object-fit: cover;
+          }
+          &-btn {
+            width: 50%;
+            height: 40px;
+            border-radius: 10px;
+            outline: none;
+            margin: 10px auto;
+            color: #fff;
+            background-image: linear-gradient(
+              91.28deg,
+              #2ebbec 4.78%,
+              #60c3ad 97.82%
+            );
+          }
+        }
+      }
+      #input-file {
+        display: none;
+      }
+    }
+    .post-create {
+      display: block;
+      position: relative;
+      width: 52.9%;
+      height: 48px;
+      margin: 20px auto 27px;
+      border-radius: 10px;
+      border: none;
+      color: #fff;
+      background-image: linear-gradient(
+        91.28deg,
+        #2ebbec 4.78%,
+        #60c3ad 97.82%
+      );
+      &::after {
+        content: "";
+        position: absolute;
+        width: 81.33%;
+        height: 40px;
+        background-image: linear-gradient(
+          99.27deg,
+          #34bce6 -35.3%,
+          #5cc3b4 66.33%,
+          #2fbcec 138.45%
+        );
+        filter: blur(40px);
+        border-radius: 5px;
+        bottom: -50%;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+    .post-list {
+      max-height: 100vh;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      width: 88.71%;
+      margin: auto;
+      &__title {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #3f4650;
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

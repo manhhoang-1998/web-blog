@@ -1,0 +1,97 @@
+.card-comment{
+    background-color: #F1F2F5;
+    border-radius: 10px;
+    margin: 10px 20px;
+    padding: 16px;
+    min-height: 60px;
+  &__title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-avata { 
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      &-user {
+        flex: 1;
+        margin-left: 15px;
+      }
+      &-name {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color:  #3F4650;
+      }
+      &-status {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #727C8A;
+      }
+      &-option {
+        align-self: baseline;
+        border: none;
+        background-color: #F1F2F5;
+        color: #080808;
+        &:hover .card-comment__title-option-item {
+          display: flex;
+        }
+        &-item {
+          position: absolute;
+          right: 10px;
+          top: 20px;
+          display: none;
+          flex-direction: column;
+          width: 70px;
+          height: 50px;
+          justify-content: space-around;
+          background-color: #f8fbff;
+          transition: all ease-in 1s;
+          &__btn {
+            border: none;
+            background-color: #f8fbff;
+            font-size: 1.2rem;
+            &:hover {
+              color: red;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            border-left: 8px solid transparent;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid #fff;
+            border-right: 8px solid transparent;
+            top: -15px;
+            right: 4px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 20px;
+            background-color: transparent;
+            top: -15px;
+            right: 0;
+          }
+        }
+        &__icon {
+          font-size: 2rem;
+          color: #080808;
+          line-height: 0;
+        }
+      }
+    }
+    &-content {
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 20px;
+      color: #3F4650;
+      margin: 0;
+      word-wrap: break-word;
+      overflow-y: hidden;
+
+    }
+}

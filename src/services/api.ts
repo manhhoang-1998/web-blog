@@ -3,14 +3,21 @@ import queryString from "query-string";
 
 const Api = axios.create({
   baseURL: "https://ans.devcamperapp.xyz/api",
-  headers: { "content-type": "application/json" },
+  headers: {
+    "content-type": "application/json",
+  },
   timeout: 30000,
   paramsSerializer: (params) => queryString.stringify(params),
 });
 
 // Add a request interceptor
 Api.interceptors.request.use(
-  function (config) {
+  async function (config) {
+    const token = localStorage.getItem("accessToken");
+    if (token !== null) {
+      setToken(JSON.parse(token));
+    }
+
     return config;
   },
   function (error) {
@@ -29,7 +36,7 @@ Api.interceptors.response.use(
 );
 
 export const setToken = (token: string) => {
-  Api.defaults.headers.common["Authorization"] = token;
+  Api.defaults.headers.common["Authorization"] = "Bearer " + token;
 };
 
 export default Api;
