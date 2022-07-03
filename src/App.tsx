@@ -17,6 +17,7 @@ function App() {
   }, [token]);
 
   const PrivateRoute: FC<any> = ({ children }: any) => {
+    const token = localStorage.getItem("accessToken");
     return token ? children : <Navigate to="/login" />;
   };
 

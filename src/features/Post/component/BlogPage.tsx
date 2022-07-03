@@ -6,6 +6,7 @@ import "./BlogPage.scss";
 import CardPost from "./card-post/CardPost";
 import PostBlog from "./post-blog/PostBlog";
 import { Link } from "react-router-dom";
+import ChatRoom from "features/Chat/Component/ChatRoom";
 
 const BlockPage: FC = () => {
   const {
@@ -190,6 +191,7 @@ const BlockPage: FC = () => {
         </div>
       </div>
       <div className="blog-container">
+        <ChatRoom author={userInfo}></ChatRoom>
         <div className="blog">
           {newsData.map((item: any, index: number) => (
             <PostBlog

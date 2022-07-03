@@ -1,7 +1,7 @@
 .page {
   display: flex;
   max-width: 1440px;
-  min-height: 100vh;
+  // min-height: 100vh;
   margin: auto;
   .post {
     width: 39.375%;
@@ -261,7 +261,7 @@
       }
     }
     .post-list {
-      max-height: 100vh;
+      // max-height: 100vh;
       overflow-y: scroll;
     &::-webkit-scrollbar {
       display: none;
@@ -281,7 +281,6 @@
     width: calc(100% - 39.375%);
     background-color: #f8fbff;
     .blog{
-      max-height: 200vh;
       overflow-y: scroll;
       &::-webkit-scrollbar {
         display: none;

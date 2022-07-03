@@ -2,14 +2,13 @@ import axios from "axios";
 import queryString from "query-string";
 
 const Api = axios.create({
-  baseURL: "https://ans.devcamperapp.xyz/api",
+  baseURL: process.env.REACT_APP_API_URL,
   headers: {
     "content-type": "application/json",
   },
   timeout: 30000,
   paramsSerializer: (params) => queryString.stringify(params),
 });
-
 // Add a request interceptor
 Api.interceptors.request.use(
   async function (config) {

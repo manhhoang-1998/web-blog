@@ -201,8 +201,7 @@ const usePost = (): IPost => {
 
   // setup NEWs
   const getAllPost = async () => {
-    const defaultAvatar =
-      "https://nestjs-series-public-bucket-wanago.s3.ap-southeast-1.amazonaws.com/d791a759-1291-4ef8-a3c8-84523ae7cecd-avataDefault.png";
+    const defaultAvatar = process.env.REACT_APP_DEFAULT_AVATAR;
     const response = await PostApi.getAllPost(0, 10);
     if (response.status === 200) {
       const newsData = response.data.map((item: any) => ({

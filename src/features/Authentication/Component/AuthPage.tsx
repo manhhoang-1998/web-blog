@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import useAuth from "../Hooks/useAuth";
 import "./AuthPage.scss";
 import CardItem, { CardItemProps } from "./card-item/CardItem";
@@ -46,6 +46,11 @@ const AuthPage: FC = () => {
     isSusscess,
     isNotify,
   } = useAuth();
+
+  useEffect(() => {
+    localStorage.removeItem("accessToken");
+  }, []);
+
   return (
     <div className="login-page">
       <div className="login-left">
